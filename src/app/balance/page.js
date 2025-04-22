@@ -66,51 +66,63 @@ export default function Balance() {
         exit={{ opacity: 0 }}
         transition={{ duration: 1 }}
       >
-        <div className="bg-balanceBg w-full h-full max-w-[500px] relative flex flex-col justify-evenly " >
-          <div className=" w-full flex justify-center items-center relative mb-[5%]">
-            <div className="w-[35vmax] max-w-[450px] aspect-[515/458] relative ">
+        <div className="bg-balanceBg w-full h-full max-w-[500px] relative flex flex-col justify-between " >
+          <div className=" w-full h-[50%] flex flex-col justify-center items-center relative">
+            <div className="w-full aspect-[536/444] relative ">
               <Image
-                src="/image/balancelogo.png"
+                src="/image/elr_balance_main.png"
                 alt="main logo"
                 layout="fill"
                 objectFit="cover"
               />
             </div>
-            <div className=" flex justify-center w-full absolute bottom-[-11%] sm:bottom-[-9%]">
-              <div className=" w-[80%] aspect-[483/122] relative">
-                <Image
-                  src="/image/resourceinfo.png"
-                  alt="ticketIcon"
-                  layout="fill"
-                  objectFit="cover"
-                />
-                <p className="mt-[2px] absolute right-[18%] top-1/2 -translate-y-1/2 text-white text-[3vmax] sm:text-[2.2vmin] [-webkit-text-stroke:0.5px_black]">{n2o >= 1000000 ? `${n2o / 1000000}m` : n2o >= 1000 ? `${n2o / 1000}k` : n2o}</p>
-                <p className="mt-[2px] absolute left-[25%] top-1/2 -translate-y-1/2 text-white text-[3vmax] sm:text-[2.2vmin] [-webkit-text-stroke:0.4px_black]">{tickets}</p>
+            <div className=" flex justify-center w-full h-[15%] ">
+              <div className=" w-[50%] relative flex justify-evenly items-center ">
+                <div className="w-[20%] aspect-[70/68] relative ">
+                  <Image
+                    src="/image/elr_ticket.png"
+                    alt="main logo"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+                <p className="mt-[2px]  text-white text-[3vmax] sm:text-[2.2vmin] [-webkit-text-stroke:0.8px_#9F7945]">{tickets}</p>
+              </div>
+              <div className=" w-[50%] flex justify-evenly items-center relative">
+                <p className="mt-[2px]  text-white text-[3vmax] sm:text-[2.2vmin] [-webkit-text-stroke:0.8px_#9F7945]">{n2o >= 1000000 ? `${n2o / 1000000}m` : n2o >= 1000 ? `${n2o / 1000}k` : n2o}</p>
+                <div className="w-[20%] aspect-[70/68] relative ">
+                  <Image
+                    src="/image/elr_elr.png"
+                    alt="main logo"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
               </div>
             </div>
           </div>
           <p className="w-full text-center text-[5vmax] sm:text-[5vmin] -rotate-2
         bg-gradient-to-r from-[#F9BC2F] via-[#FED9A5] to-[#EB9F15] bg-clip-text text-transparent [-webkit-text-stroke:1px_black] ">Get Magic Water</p>
           <div className=" w-full py-[1vmin] flex gap-3 flex-col items-center justify-center">
-            <div onClick={() => getTicket(1, 500)} className=" w-[36vmax] sm:w-[40vmin] aspect-[486/146] relative active:scale-90 transition-transform duration-200 ">
+            <div onClick={() => getTicket(1, 500)} className=" w-[36vmax] sm:w-[40vmin] aspect-[486/132] relative active:scale-90 transition-transform duration-200 ">
               <Image
-                src="/image/water1.png"
+                src="/image/elr1.png"
                 alt="meatIcon"
                 layout="fill"
                 objectFit="cover"
               />
             </div>
-            <div onClick={() => getTicket(3, 1300)} className="w-[36vmax] sm:w-[40vmin] aspect-[486/146] relative active:scale-90 transition-transform duration-200 ">
+            <div onClick={() => getTicket(3, 1300)} className="w-[36vmax] sm:w-[40vmin] aspect-[486/132] relative active:scale-90 transition-transform duration-200 ">
               <Image
-                src="/image/water2.png"
+                src="/image/elr3.png"
                 alt="meatIcon"
                 layout="fill"
                 objectFit="cover"
               />
             </div>
-            <div onClick={() => getTicket(5, 2000)} className="w-[36vmax] sm:w-[40vmin] aspect-[486/146] relative active:scale-90 transition-transform duration-200 ">
+            <div onClick={() => getTicket(5, 2000)} className="w-[36vmax] sm:w-[40vmin] aspect-[486/132] relative active:scale-90 transition-transform duration-200 ">
               <Image
-                src="/image/water3.png"
+                src="/image/elr5.png"
                 alt="meatIcon"
                 layout="fill"
                 objectFit="cover"
@@ -118,18 +130,7 @@ export default function Balance() {
             </div>
           </div>
           {pop && (
-            // <div className="popup-container fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center transition-opacity duration-300">
-            //   <div className="popup bg-white p-6 rounded-lg shadow-lg w-4/5 sm:w-1/3">
-            //     <h3 className="text-xl font-semibold text-center text-red-500">Warning</h3>
-            //     <p className="mt-2 text-2xl text-center text-gray-700">Need more N2O!</p>
-            //     <button
-            //       onClick={() => setPop(false)}
-            //       className="popup-action-btn mt-4 w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600">
-            //       ok
-            //     </button>
-            //   </div>
-            // </div>
-            <div className=" absolute top-[10px] left-1/2 -translate-x-1/2 z-[999] "><Alert severity="error">Need more Magic Water.</Alert></div>
+            <div className=" absolute top-[10px] left-1/2 -translate-x-1/2 z-[999] "><Alert severity="error">Need more ELR.</Alert></div>
           )}
         </div>
       </motion.div>

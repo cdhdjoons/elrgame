@@ -65,7 +65,7 @@ export default function Invite() {
                             <p className=" text-white text-[4vmin] sm:text-[2.7vmin]">Your friends join Mystic</p>
                             <p className=" text-white text-[3vmin] sm:text-[2vmin]">Get a play pass for each friends</p>
                         </div>
-                        <p className=" text-white text-[4vmin] sm:text-[2.7vmin]">1 friends / 2000 MANA</p>
+                        <p className=" text-white text-[4vmin] sm:text-[2.7vmin]">1 friends / 2000 ELR</p>
                     </div>
                     <div onClick={handleCopyClick} className="w-full flex justify-center gap-[3%] relative active:scale-90 transition-transform duration-100 ">
                         <div className="w-[60%] aspect-[317/38] relative">

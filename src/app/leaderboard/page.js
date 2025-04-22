@@ -7,7 +7,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import rankerDb from "../db/rankerDb";
 
 export default function LeaderBoard() {
-    
+
     const [n2o, setN2O] = useState(0);
     const [teleId, setTeleId] = useState('unknown');
     const [rank, setRank] = useState(0);
@@ -66,38 +66,73 @@ export default function LeaderBoard() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 1 }}
             >
-                <div className=" w-full h-full max-w-[500px] relative flex flex-col justify-evenly items-center " >
-                    <div className={` w-[32vmax] max-w-[500px] aspect-[260/42] relative`}>
-                        <p className="w-full text-center text-[6vmax] sm:text-[6vmin] -rotate-2
+                <div className=" w-full h-full max-w-[500px] relative flex flex-col gap-2 justify-evenly items-center " >
+                    <p className="w-full text-center text-[6vmax] sm:text-[6vmin] -rotate-2
         bg-gradient-to-r from-[#F9BC2F] via-[#FED9A5] to-[#EB9F15] bg-clip-text text-transparent [-webkit-text-stroke:0.6px_black] ">Leaderboard</p>
-                    </div>
                     <div className=" flex flex-col items-center ">
-                        <div className="w-[30vmax] sm:w-[23vmax] aspect-[264/348] relative active:scale-90 transition-transform duration-200">
+                        <div className=" w-[25vmax] sm:w-[20vmax] aspect-[264/264] relative active:scale-90 transition-transform duration-200">
                             <Image
-                                src="/image/rankcircle.png"
+                                src="/image/pdb_rankcircle_border.png"
                                 alt="main logo"
                                 layout="fill"
                                 objectFit="fill"
+                                className="z-[90]"
                             />
-                            <p className=" absolute top-[77%] left-[50%] -translate-x-1/2 text-[#FFD37E] text-[3.5vmin] sm:text-[1.5vmin]">{teleId === undefined ? '--' : teleId}</p>
-                            <div className=" absolute top-[66%] left-[50%] -translate-x-1/2 flex gap-[5px]">
-                                <p className=" text-[#FFD37E] text-[3.5vmin] sm:text-[1.4vmin]">Rank</p>
-                                <p className=" text-[#FFD37E] text-[3.5vmin] sm:text-[1.4vmin]">{rank}</p>
-                            </div>
-                            <div className=" absolute w-[30%] top-[84%] left-[50%] -translate-x-1/2 flex justify-between items-center gap-[5px]">
-                                <div className="relative w-[25%] aspect-[23/26]">
+                            <svg
+                                className="absolute left-[50%] top-[50%] p-[4%] -translate-y-[50%] -translate-x-[50%] w-[115%] transform rotate-90" // 6시 방향부터 시작하도록 회전
+                                viewBox="0 0 100 100"
+                            >
+                                <defs>
+                                    <linearGradient id="gradientColors" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stopColor="#C09645" />
+                                        <stop offset="50%" stopColor="#FFC977" />
+                                        <stop offset="100%" stopColor="#C09645" />
+                                    </linearGradient>
+                                </defs>
+                                {/* 배경 원 */}
+                                <circle
+                                    cx="50"
+                                    cy="50"
+                                    r="40"
+                                    stroke="black"
+                                    strokeWidth="5"
+                                    fill="none"
+                                />
+                                {/* 진행 원 */}
+                                <circle
+                                    cx="50"
+                                    cy="50"
+                                    r="40"
+                                    stroke="url(#gradientColors)"
+                                    strokeWidth="5"
+                                    fill="none"
+                                    strokeDasharray="251.2"
+                                    strokeDashoffset={251.2 - (n2o / 10000) * 251.2}
+                                    strokeLinecap="round"
+                                    className="transition-all duration-300"
+                                />
+                            </svg>
+                            <div className=" absolute left-[50%] top-[50%] p-[4%] -translate-y-[50%] -translate-x-[50%] w-[90%] h-[90%] rounded-full ">
+                                <div className="w-full aspect-[1/1] relative rounded-full ">
                                     <Image
-                                        src="/image/gem.png"
+                                        src="/image/elr_rank_main.png"
                                         alt="main logo"
                                         layout="fill"
-                                        objectFit="cover"
+                                        objectFit="fill"
                                     />
                                 </div>
+                            </div>
+                            <p className=" absolute bottom-[-8%] left-[50%] -translate-x-1/2 text-[#FFD37E] text-[3.5vmin] sm:text-[1.5vmin]">{teleId === undefined ? '--' : teleId}</p>
+                            <div className=" absolute bottom-[5%] left-[50%] -translate-x-1/2 flex gap-[5px] z-[100]">
+                                <p className=" text-[#FFD37E] text-[2.8vmin] sm:text-[1vmin]">Rank</p>
+                                <p className=" text-[#FFD37E] text-[2.8vmin] sm:text-[1vmin]">{rank}</p>
+                            </div>
+                            <div className=" absolute bottom-[-20%] left-[50%] -translate-x-1/2 flex justify-between items-center gap-[5px]">
                                 <p className=" text-[#FFD37E] text-[4.8vmin] sm:text-[2vmin]">{n2o}</p>
                             </div>
                         </div>
                     </div>
-                    <p className="w-full text-center text-[4vmax] sm:text-[6vmin] -rotate-2
+                    <p className="w-full mt-2 text-center text-[4vmax] sm:text-[6vmin] -rotate-2
         bg-gradient-to-r from-[#F9BC2F] via-[#FED9A5] to-[#EB9F15] bg-clip-text text-transparent font-bold [-webkit-text-stroke:0.4px_black] ">{holderCount}k Holders</p>
                     <div className="  w-[90%] py-3 flex justify-center items-center max-h-[30vmax] sm:max-h-[500px] 
                      bg-[length:100%_100%] bg-no-repeat " style={{ backgroundImage: `url(/image/inviteinfo.png)` }}>
@@ -115,7 +150,7 @@ export default function LeaderBoard() {
                                     </div>
                                     <p className=" w-[45%] text-center text-[#FFD37E] text-[4.2vmin] sm:text-[2.3vmin]">{ranker.name}</p>
                                     <p className=" flex-1 text-center text-[#FFD37E] text-[4vmin] sm:text-[1.6vmin]">{ranker.score}</p>
-                                    <p className=" flex-1 text-center text-[#FFD37E] text-[5vmin] sm:text-[2.3vmin]">{index > 8 ? `0${index + 1}` :`00${index + 1}`}</p>
+                                    <p className=" flex-1 text-center text-[#FFD37E] text-[5vmin] sm:text-[2.3vmin]">{index > 8 ? `0${index + 1}` : `00${index + 1}`}</p>
                                 </div>
                             ))}
 

@@ -127,19 +127,7 @@ export default function ClaimTimer() {
                 transition={{ duration: 0.3 }}
             >
                 <div className="w-full flex justify-center items-center relative">
-                    <div className="w-[28vmax] max-w-[450px] aspect-[285/285] relative">
-                        <Image
-                            src="/image/balancebtn.png"
-                            alt="main logo"
-                            fill
-                            style={{ objectFit: "cover" }}
-                        />
-                        <p className={` absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-[2.8vmax] sm:text-[2.2vmax]
-             [-webkit-text-stroke:1px_black] ${libreCaslon.className} font-bold mt-1 `}>{n2o >= 1000000 ? `${n2o / 1000000}m` : n2o >= 1000 ? `${n2o / 1000}k` : n2o}</p>
-                    </div>
-                </div>
-                <div className="w-full flex justify-center items-center relative">
-                    <div className="w-[78%] sm:w-[80%] aspect-[510/105] relative flex justify-start">
+                    <div className="w-[90%] sm:w-[80%] aspect-[510/105] relative flex justify-start">
                         <div className=" absolute w-full aspect-[510/105]  ">
                             <Image
                                 src="/image/farmmanabar.png"
@@ -155,18 +143,33 @@ export default function ClaimTimer() {
                             <p onClick={startTimer} className=" absolute top-[70%] -translate-y-1/2 right-[5%] text-[#646464] text-[1.5vmax] sm:text-[1vmax] [-webkit-text-stroke:0.2px_black]
                         active:scale-90 transition-transform duration-200">Claim now</p>}
                         <div className=" h-full w-[68%] relative flex flex-col justify-evenly py-[2%] items-end  ">
-                            <p className=" w-[65%] text-center text-[#FFA15C] text-[3.2vmin] sm:text-[1.5vmin] [-webkit-text-stroke:0.3px_black]">Farming 2000 MANA</p>
+                            <p className=" w-[65%] text-center text-[#FFA15C] text-[3.2vmin] sm:text-[1.5vmin] [-webkit-text-stroke:0.3px_black]">Farming 2000 ELR</p>
                             <div className="w-[65%] h-[35%] border border-[#EB9F15] relative ">
                                 <div className="w-full bg-[#DD9300] h-full absolute left-0" style={{ width: progressWidth }}></div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div className="w-full flex flex-col justify-center items-center relative">
+                <p className="w-full text-center text-[3vmax] sm:text-[3vmin]
+        bg-gradient-to-r from-[#F9BC2F] via-[#FED9A5] to-[#EB9F15] bg-clip-text text-transparent [-webkit-text-stroke:0.4px_black] ">Solve puzzle, Unlock secrets</p>
+                    <div className="w-full max-w-[450px] aspect-[546/337] relative">
+                        <Image
+                            src="/image/elr_balance.png"
+                            alt="main logo"
+                            fill
+                            style={{ objectFit: "cover" }}
+                        />
+                        <p className={` absolute bottom-[-5%] left-1/2 -translate-x-1/2 text-white text-[2.8vmax] sm:text-[2.2vmax]
+             [-webkit-text-stroke:1px_black] ${libreCaslon.className} font-bold mt-1 `}>{n2o >= 1000000 ? `${n2o / 1000000}m` : n2o >= 1000 ? `${n2o / 1000}k` : n2o}</p>
+                    </div>
+                </div>
 
-                <Link href="/balance" className="w-[85%] sm:w-[85%] aspect-[530/145] flex justify-center items-center relative active:scale-90 transition-transform duration-200">
-                    <p className=" ml-[10%] text-[#F9BC2F] text-[4vmin] sm:text-[1.8vmin] z-10">Now Get More Magic Water!!</p>
+
+                <Link href="/balance" className="w-[100%] max-h-[20%] sm:w-[85%] aspect-[579/150] flex justify-center items-center relative active:scale-90 transition-transform duration-200">
+                    <p className=" ml-[0%] mb-[5%] text-[#F9BC2F] text-[4vmin] sm:text-[1.8vmin] z-10">Now Get More Magic Water!!</p>
                     <Image
-                        src="/image/getmanaIcon.png"
+                        src="/image/elr_getelr.png"
                         alt="main logo"
                         fill
                         style={{ objectFit: "cover" }}
