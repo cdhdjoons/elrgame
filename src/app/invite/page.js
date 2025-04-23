@@ -12,7 +12,7 @@ export default function Invite() {
     const [copied, setCopied] = useState(false);
 
     const handleCopyClick = () => {
-        const link = "https://yourlink.com"; // 복사할 링크
+        const link = "https://t.me/elr_world_bot"; // 복사할 링크
 
         // 클립보드에 링크를 복사
         navigator.clipboard.writeText(link).then(() => {

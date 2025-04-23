@@ -136,7 +136,7 @@ export default function DailyTask() {
                                     />
                                 </div>}
                             {disabledDaily[1] ?
-                                <a href="https://x.com/MSDG_official" target="_blank" rel="noopener noreferrer">
+                                <a href="https://x.com/Elr_world" target="_blank" rel="noopener noreferrer">
                                     <div onClick={() => dailyHandleClick(1, 1000)} className="w-[38vmax] sm:w-[22vmax] aspect-[489/147] relative active:scale-90 transition-transform duration-200">
                                         <Image
                                             src="/image/elr_retweet.png"
@@ -177,7 +177,7 @@ export default function DailyTask() {
                                 <p className="absolute top-[18%] left-[8%] text-[2.6vmax] text-[#D0D0D0] font-bold">OPTION TASK</p>
 
                             </div>
-                            {disabledTask[0] ? <a href="https://x.com/MSDG_official" target="_blank" rel="noopener noreferrer">
+                            {disabledTask[0] ? <a href="https://x.com/Elr_world" target="_blank" rel="noopener noreferrer">
                                 <div onClick={() => handleClick(0, 1000)} className="w-[38vmax] sm:w-[22vmax] aspect-[489/147] relative active:scale-90 transition-transform duration-200">
                                     <Image
                                         src="/image/elr_follow.png"

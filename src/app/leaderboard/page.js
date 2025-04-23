@@ -142,7 +142,7 @@ export default function LeaderBoard() {
                                 <div key={ranker.name} className="w-full flex justify-stretch items-center " >
                                     <div className=" relative w-[20%] aspect-[77/77]">
                                         <Image
-                                            src="/image/rankerpic.png"
+                                            src="/image/elr_game.png"
                                             alt="main logo"
                                             layout="fill"
                                             objectFit="cover"

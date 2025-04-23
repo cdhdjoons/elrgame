@@ -19,7 +19,7 @@ export default function Home() {
           </div>
         </div>
         <div className="w-full flex justify-center items-center relative mt-[5%]">
-          <a href="https://x.com/MSDG_official" target="_blank" rel="noopener noreferrer">
+          <a href="https://x.com/Elr_world" target="_blank" rel="noopener noreferrer">
             <div className="w-[35vmax] max-w-[450px] flex items-center aspect-[478/62] relative active:scale-95 transition-transform duration-100 ">
               <Image
                 src="/image/joinbtn.png"
