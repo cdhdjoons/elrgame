@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import ClaimTimer from "./components/claimtimer";
+import Intro from "./components/intro";
 
 
 export default function Home() {
   return (
     <div className=" w-full h-full">
+      <Intro />
       <div className=" w-full h-full max-w-[500px] relative flex flex-col justify-evenly bg-cover bg-no-repeat " >
         <div className="w-full flex justify-center items-center relative">
           <div className="w-[40vmax] max-w-[400px] aspect-[432/116] relative mt-[5%] ">
@@ -34,7 +36,7 @@ export default function Home() {
           </a>
         </div>
         <ClaimTimer />
-        
+
       </div>
     </div>
   );
