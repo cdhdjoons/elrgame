@@ -25,14 +25,14 @@ export default function Intro() {
         <AnimatePresence mode="wait">
             {showIntro ? (
                 <motion.div className=" z-[99] w-full h-lvh max-w-[500px] max-h-[1080px] bg-black
-              flex justify-center items-center overflow-hidden absolute duration-300 "
+                flex justify-center items-center overflow-hidden absolute duration-300 bg-no-repeat bg-cover "
                     style={{ backgroundImage: `url(/image/elr_intro_bg.png)` }}
                     initial={false}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 1 }}
                 >
-                    <div className="w-[30vmax] sm:w-[25vmax] aspect-[402/119] relative">
+                    <div className="w-[30vmax] sm:w-[25vmax] aspect-[432/116] relative">
                         <Image
                             src="/image/elr_logo.png"
                             alt="main logo"
@@ -41,6 +41,7 @@ export default function Intro() {
                         />
                     </div>
                 </motion.div>) : ''}
+
         </AnimatePresence>
     );
 }
