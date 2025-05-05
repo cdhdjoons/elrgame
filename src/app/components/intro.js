@@ -38,6 +38,7 @@ export default function Intro() {
                             alt="main logo"
                             layout="fill"
                             objectFit="cover"
+                            priority
                         />
                     </div>
                 </motion.div>) : ''}
